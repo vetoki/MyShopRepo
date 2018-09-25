@@ -91,13 +91,12 @@ namespace MyShop.WebUI.Controllers
 
             if(file != null)
             {
-                product.Image = product.Id + Path.GetExtension(file.FileName);
-                file.SaveAs(Server.MapPath("//Content//ProductImages//") + product.Image);
+                productToEdit.Image = product.Id + Path.GetExtension(file.FileName);
+                file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
             }
 
             productToEdit.Category = product.Category;
             productToEdit.Description = product.Description;
-            productToEdit.Image = product.Image;
             productToEdit.Name = product.Name;
             productToEdit.Price = product.Price;
 
